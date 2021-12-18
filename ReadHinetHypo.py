@@ -4,7 +4,7 @@
 #
 # < Note >
 # use Safari or Firefox when downloading the html file on eq. catalogue
-# the part of eq. catalogue is missing when using Google Chrome
+# the part of eq. catalogue is missing when downloading with Google Chrome
 #
 import pandas as pd
 from bs4 import BeautifulSoup
