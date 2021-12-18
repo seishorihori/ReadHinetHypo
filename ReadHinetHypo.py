@@ -29,18 +29,7 @@ def ReadHinetHypo(FullPath2File):
     
 ## convert list to data frame
     columns = ['Date', 'Time', 'Terr', 'Lat', 'Yerr', 'Lon', 'Xerr', 'Depth', 'Zerr', 'Mag' ]
-# make 'dtype' dcitionary
-#    dtypes = {}
-#    for icol, col in enumerate(columns):
-#        print( icol, col )
-#        print( dtypes )
-#        if icol <= 1:
-#            dtypes[ col ] = 'np.object'
-#        else: 
-#            dtypes[ col ] = 'np.float'
-
     HypoDF = pd.DataFrame( Hypos, columns=columns )
-#    HypoDF = pd.DataFrame( Hypos, columns=columns, dtype=dtypes )
 # change data type in a silly way
     for column in columns[2:10]:
         HypoDF[column] = HypoDF[column].astype('float')
