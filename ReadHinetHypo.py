@@ -2,6 +2,10 @@
 # read a htnl file on NIED's Hi-net auto Eq. catalogue 
 # and convert Pandas data frame
 #
+# coded by H. Horikawa
+#
+# under GNU General Public License v3.0
+#
 # < Note >
 # use Safari or Firefox when downloading the html file on eq. catalogue
 # the part of eq. catalogue is missing when downloading with Google Chrome
