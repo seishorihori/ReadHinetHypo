@@ -4,8 +4,6 @@ read the html file of NIED's Hi-net earthquake catalogue and convert it to Panda
 ## Overview
 防災科学技術研究所のHi-netサイトで公開されている震源リストファイル（htmlファイル）から震源情報を取り出し、Pandasのデータフレームに格納して返すPythonライブラリ。
 
-※以下、他のプロジェクトのコピペにつき、工事中
-
 ## Description
 * ReadHinetHypo.py：防災科学技術研究所のHi-netサイトで公開されている震源リストファイル（htmlファイル）から震源情報を取り出しPandasのデータフレームに格納して返すPythonライブラリ。
 
