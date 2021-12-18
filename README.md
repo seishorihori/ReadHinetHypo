@@ -18,7 +18,7 @@ Several researchers (mainly seismologists) will create codes for the same purpos
 
 ## Requirement
 * Python 3系列
-* beautifulsoup
+* Beautiful Soup 4
 * Pandas
 
 ## Usage
