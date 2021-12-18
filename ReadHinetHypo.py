@@ -13,6 +13,8 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 
+import sys
+
 ###
 def ReadHinetHypo(FullPath2File):
     html = open(FullPath2File, 'rt', encoding='euc-jp').read()
@@ -25,11 +27,27 @@ def ReadHinetHypo(FullPath2File):
         tmp = line.split()
         Hypos.append(tmp)
     
-# convert list to data frame
+## convert list to data frame
     columns = ['Date', 'Time', 'Terr', 'Lat', 'Yerr', 'Lon', 'Xerr', 'Depth', 'Zerr', 'Mag' ]
+# make 'dtype' dcitionary
+#    dtypes = {}
+#    for icol, col in enumerate(columns):
+#        print( icol, col )
+#        print( dtypes )
+#        if icol <= 1:
+#            dtypes[ col ] = 'np.object'
+#        else: 
+#            dtypes[ col ] = 'np.float'
+
     HypoDF = pd.DataFrame( Hypos, columns=columns )
-    HypoDF[ 'DateTime' ] = pd.to_datetime( HypoDF['Date'].str.cat(HypoDF['Time'], sep=' ') )
-    print( HypoDF )
+#    HypoDF = pd.DataFrame( Hypos, columns=columns, dtype=dtypes )
+# change data type in a silly way
+    for column in columns[2:10]:
+        HypoDF[column] = HypoDF[column].astype('float')
+
+    HypoDF['DateTime'] = pd.to_datetime( HypoDF['Date'].str.cat(HypoDF['Time'], sep=' ') )
+#    print( HypoDF )
+#    print( HypoDF.dtypes )
 
     return HypoDF
 
