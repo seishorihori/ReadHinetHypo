@@ -1,6 +1,3 @@
-====
-This file is written in Japanese (UTF-8 code). 
-
 # ReadHinetHypo
 read the html file of NIED's Hi-net earthquake catalogue and convert it to Pandas dataframe
 
